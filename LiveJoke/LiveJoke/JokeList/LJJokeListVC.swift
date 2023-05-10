@@ -134,7 +134,7 @@ class LJJokeCell: UITableViewCell {
             lbl.textColor = UIColor(hexString: "494A50")
             lbl.text = joke.content
             lbl.sizeToFit()
-            lbl.font = UIFont(name: "Halvetica", size: 15)
+            lbl.font = UIFont(name: "Arial", size: 15)
             contV.addSubview(lbl)
             jokeLbl = lbl
             
