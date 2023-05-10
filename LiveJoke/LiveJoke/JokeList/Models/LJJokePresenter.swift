@@ -22,7 +22,7 @@ class LJJokePresenter {
     private(set) var allJokes = [LJJokeInfo]()
     private static let kAPIPath = "https://geek-jokes.sameerkumar.website/api?format=json"
     static let interval = 5.0
-    private let maxContain = 5
+    private let maxContain = 10
     private var shouldFetchNext = true
     
     weak var delegate: LJJokePresenterDelegate?

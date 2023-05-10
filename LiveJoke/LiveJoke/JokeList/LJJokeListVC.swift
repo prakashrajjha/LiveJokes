@@ -53,12 +53,13 @@ private extension LJJokeListVC {
     }
     
     func addHeader() {
-        let hView = UIView.init(frame: CGRect.init(x: 0, y: 50, width: 300, height: 50))
+        let hView = UIView.init(frame: CGRect.init(x: 0, y: 50, width: 300, height: 40))
         hView.backgroundColor = UIColor.clear
 
         let lbl = UILabel.init(frame: CGRect.init(x: 15, y: 10, width: 300, height: 24))
         lbl.font = UIFont.boldSystemFont(ofSize: 30)
         lbl.text = "Jokes"
+        lbl.textColor = UIColor(hexString: "23447B")
         hView.addSubview(lbl)
         self.table.tableHeaderView = hView
     }
@@ -121,33 +122,29 @@ class LJJokeCell: UITableViewCell {
                 contV.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor,constant: 15),
                 contV.topAnchor.constraint(equalTo: self.contentView.safeAreaLayoutGuide.topAnchor,constant: 10),
                 contV.widthAnchor.constraint(equalTo: self.contentView.widthAnchor, constant: -30 ),
-                contV.heightAnchor.constraint(equalTo: self.contentView.heightAnchor, constant: -20 ),
+                contV.heightAnchor.constraint(equalTo: self.contentView.heightAnchor, constant: -15 ),
             ])
             
             jokeContV = contV
-            contV.roundWith(border: 1, color: UIColor(white: 0.8, alpha: 0.1), rad: 5)
+            contV.roundWith(border: 1, color: UIColor(hexString: "FEFEFA"), rad: 5)
             
             let lbl = UILabel()
             lbl.numberOfLines = 0
             lbl.translatesAutoresizingMaskIntoConstraints = false
-           // lbl.backgroundColor = UIColor.red
+            lbl.textColor = UIColor(hexString: "494A50")
             lbl.text = joke.content
             lbl.sizeToFit()
-            lbl.font = UIFont(name: "Halvetica", size: 17)
+            lbl.font = UIFont(name: "Halvetica", size: 15)
             contV.addSubview(lbl)
-            self.roundWith(border: 1, color: UIColor(white: 0.8, alpha: 0.1), rad: 5)
             jokeLbl = lbl
             
             NSLayoutConstraint.activate([
-                lbl.leadingAnchor.constraint(equalTo: contV.leadingAnchor,constant: 16),
-                lbl.topAnchor.constraint(equalTo: contV.safeAreaLayoutGuide.topAnchor,constant: 16),
-                lbl.widthAnchor.constraint(equalTo: contV.widthAnchor, constant: -20 ),
-                lbl.heightAnchor.constraint(equalTo: contV.heightAnchor, constant: -30 ),
+                lbl.leadingAnchor.constraint(equalTo: contV.leadingAnchor,constant: 14),
+                lbl.topAnchor.constraint(equalTo: contV.safeAreaLayoutGuide.topAnchor,constant: 10),
+                lbl.widthAnchor.constraint(equalTo: contV.widthAnchor, constant: -30 ),
+                lbl.heightAnchor.constraint(equalTo: contV.heightAnchor, constant: -25 ),
             ])
         }
-        
-       
-        
         jokeLbl?.text = joke.content
     }
 }
