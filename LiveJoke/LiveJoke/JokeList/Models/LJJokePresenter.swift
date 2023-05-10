@@ -14,14 +14,15 @@ struct LJJokeInfo: Codable {
 
 
 protocol LJJokePresenterDelegate: AnyObject {
-    func presenterDidupdateData()
+    func insert(joke: LJJokeInfo, at: Int)
+    func remove(joke: LJJokeInfo?, from: Int)
 }
 
 class LJJokePresenter {
     private(set) var allJokes = [LJJokeInfo]()
     private static let kAPIPath = "https://geek-jokes.sameerkumar.website/api?format=json"
     static let interval = 5.0
-    private let maxContain = 10
+    private let maxContain = 5
     private var shouldFetchNext = true
     
     weak var delegate: LJJokePresenterDelegate?
@@ -50,9 +51,8 @@ class LJJokePresenter {
             
             if response.sCode == .kSuccessCode, let sResp = response.responseDict as? kJSONDictionary {
                 if let joke = sResp["joke"] as? String, joke.count > 0 {
-                    let jInfo = LJJokeInfo(title: "Test",content: joke)
+                    let jInfo = LJJokeInfo(title: "Joke",content: joke)
                     self.insertNew(joke: jInfo)
-                    self.delegate?.presenterDidupdateData()
                     self.cacheCurrentList()
                 }
             }
@@ -72,6 +72,7 @@ class LJJokePresenter {
         if self.allJokes.count > maxContain {
             self.allJokes.removeLast()
         }
+        self.delegate?.insert(joke: joke, at: 0)
     }
 }
 

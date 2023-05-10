@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6416EF7E2A0B8550003EC8AF /* Ext_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6416EF7D2A0B8550003EC8AF /* Ext_View.swift */; };
+		6416EF802A0BA95D003EC8AF /* Ext_UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6416EF7F2A0BA95D003EC8AF /* Ext_UIColor.swift */; };
 		64226EC62A0584560042727B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64226EC52A0584560042727B /* AppDelegate.swift */; };
 		64226ECA2A0584560042727B /* LJJokeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64226EC92A0584560042727B /* LJJokeListVC.swift */; };
 		64226ECD2A0584560042727B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64226ECB2A0584560042727B /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6416EF7D2A0B8550003EC8AF /* Ext_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext_View.swift; sourceTree = "<group>"; };
+		6416EF7F2A0BA95D003EC8AF /* Ext_UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ext_UIColor.swift; sourceTree = "<group>"; };
 		64226EC22A0584560042727B /* LiveJoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveJoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64226EC52A0584560042727B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64226EC92A0584560042727B /* LJJokeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJJokeListVC.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				64226EFF2A0597D80042727B /* Preference.swift */,
+				6416EF7D2A0B8550003EC8AF /* Ext_View.swift */,
+				6416EF7F2A0BA95D003EC8AF /* Ext_UIColor.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -302,10 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6416EF802A0BA95D003EC8AF /* Ext_UIColor.swift in Sources */,
 				64226EF72A05882E0042727B /* LJJokePresenter.swift in Sources */,
 				64226ECA2A0584560042727B /* LJJokeListVC.swift in Sources */,
 				64226EC62A0584560042727B /* AppDelegate.swift in Sources */,
 				64226EFC2A058EF50042727B /* NetworkRequest.swift in Sources */,
+				6416EF7E2A0B8550003EC8AF /* Ext_View.swift in Sources */,
 				64226EFE2A058F1D0042727B /* NetworkResponse.swift in Sources */,
 				64226F042A0598700042727B /* LJJokeCache.swift in Sources */,
 				64226F002A0597D80042727B /* Preference.swift in Sources */,
